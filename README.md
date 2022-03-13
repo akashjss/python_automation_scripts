@@ -2,15 +2,15 @@
 
 find_rtt.py -- 
 
-Scenario ---- I have two servers server1 and server2. Both servers have two public IPs sip1 and sip2. server1 has sip1 as primary and server2 has sip2 as primary IP(this can be done using  bgp).Now there is a vendor server vendor11 which has one public IP vip1.
+Scenario ---- I have two servers server1 and server2. Both servers have two public IPs sip1 and sip2. server1 has sip1 as primary and server2 has sip2 as primary IP(this can be done using  bgp).Now there is a vendor server vendor1 which has one public IP vip1.
 
-Server Name          Server IP
+Server Name               Server IP
 server1          -->      sip1 (primary) and sip2 (secondary)
 server2          -->      sip2 (secondary) and sip1 (primary)
 vendor1          -->      vip1 (primary)
 
-I want to know if the vendor server vendor1 is near(least rtt) to sever1 or server2. I can do that by logging in to server1 and server2 and manually pinging vendor1 IP (vip1).Then the ping which has the least rtt can be determined. 
-This script automates all these steps and returns the lowest rtt.
+I want to know which server is near(least rtt) to vip1. I can do that by logging in to server1 and server2 and manually pinging vip1.
+This script automates all these steps and returns the public IP which has lowest rtt.
 We can easily extend the script to check multiple vendor IPs.
 
 Command format -- python3 find_rtt.py ssh-username ssh-pwd server1-name server1-primary-ip server2-name server2-primary-ip vendor1-ip
