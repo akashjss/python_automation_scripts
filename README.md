@@ -14,4 +14,5 @@ This script automates all these steps and returns the public IP which has lowest
 We can easily extend the script to check multiple vendor IPs.
 
 Command format -- python3 find_rtt.py ssh-username ssh-pwd server1-name server1-primary-ip server2-name server2-primary-ip vendor1-ip
+
 Example command -- python3 find_rtt.py my-username 12345678 server1 1.1.1.1 server2 2.2.2.2 8.8.8.8
